@@ -1,1 +1,23 @@
-spring.application.name=memoboard
+spring:
+  application:
+    name: memoboard
+
+
+
+  security:
+    oauth2:
+      client:
+        registration:
+          서비스명:
+            client-name: 서비스명
+            client-id: 서비스에서_받은_ID
+            client-secret: 서비스에서_받은_비밀번호
+            redirect-uri: 서비스에_등록한_우리_로그인_URL
+            authorization-grant-type: authorization_code
+            scope: 리소스_접근_범위
+        provider:
+          서비스명:
+            authorization-uri: 로그인_창_주소
+            token-uri: 토큰_받는_주소
+            user-info-uri: 사용자_정보_주소
+            user-name-attribute: 응답에서_사용자_ID_필드
